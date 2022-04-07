@@ -8,7 +8,14 @@ app = Flask(__name__)
 CORS(app)
 
 # Connecting the Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ueutiltpsibuaf:9fb9fd3e20ff69c7f4789d9b9f08a812ec379f3bdf1d3e7366134c5293ae77da@ec2-3-230-122-20.compute-1.amazonaws.com:5432/de5tm46bklivol'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://zybrdrdsgxvtss:bd83da69e431203e28acfe61ffcdd891b303914f3cd6005058fff79f19a5abd6@ec2-54-173-77-184.compute-1.amazonaws.com:5432/d5pn062kkjdnfu'
+@@ -78,4 +78,4 @@ def delete(todo_id):
+
+if __name__ == "__main__":
+    db.create_all()
+    app.run(debug=True) 
+    app.run(debug=True)
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False         
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
