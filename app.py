@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
@@ -9,13 +10,6 @@ CORS(app)
 
 # Connecting the Database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ueutiltpsibuaf:9fb9fd3e20ff69c7f4789d9b9f08a812ec379f3bdf1d3e7366134c5293ae77da@ec2-3-230-122-20.compute-1.amazonaws.com:5432/de5tm46bklivol'
-@@ -78,4 +78,4 @@ def delete(todo_id):
-
-if __name__ == "__main__":
-    db.create_all()
-    app.run(debug=True) 
-    app.run(debug=True)
-
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False         
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
